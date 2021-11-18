@@ -133,6 +133,11 @@ namespace TestSendTransactions
 		{
 			var defaultUrl = "http://localhost/TestWebService/";
 
+			if (args.Length == 1)
+			{
+				defaultUrl = args[0];
+			}
+
 			var httpClient = new HttpClient
 			{
 				BaseAddress = new Uri(defaultUrl)
